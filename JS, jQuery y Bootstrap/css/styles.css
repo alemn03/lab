@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27/03/2017, 08:33:01 PM
+    Author     : ale
+*/
+
+.presentacion{
+    font-size: 1.0em;
+    color: #fd8402;
+    
+}
+
+.idSelector{
+    font-size: 1.0em;
+    color: #fff;
+    background-color: blue;
+    
+}
+
+.classSelector{
+    font-size: 1.0em;
+    color: #fff;
+    background-color: red;
+    
+}
+
+.tagSelector{
+    font-size: 1.0em;
+    color: #fff;
+    background-color: green;
+    
+    
+}
+
+.changeSelector{
+    font-size: 1.0em;
+    color: #000;
+    background-color: yellow;
+    
+}
+
+.childSelector{
+    font-size: 1.0em;
+    color: #000;
+    background-color: pink;
+    
+    
+}

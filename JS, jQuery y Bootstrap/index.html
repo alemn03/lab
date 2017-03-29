@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link id="css" rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src="js/jquery-3.2.0.min.js" type="text/javascript"> </script>
+          
+        <title>Laboratorio JS y JQuery</title>
+    </head>
+
+    <body>
+
+        <h1>Laboratorio JS y JQuery</h1>
+        <ul>
+            <li id="thing1">thing 1</li>
+            <li>thing 2</li>
+            <li>thing 3</li>
+            <li class="special">thing 4</li>
+            <li>thing 5</li>
+            <li class="special">thing 6</li>
+        </ul>
+
+
+        <ul id="languages">
+            <li>Mandarin</li>
+            <li>English
+                <ul class="greetings">
+                    <li class="main-greeting">Hi</li>
+                    <li>Hello</li>
+                    <li>Slang
+                        <ul data-troy>
+                            <li>What's up doc?</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Hindustani</li>
+            <li data-troy="true">Spanish</li>
+            <li>Russian</li>
+            <li>Arabic</li>
+            <li>Bengali</li>
+            <li>Portuguese</li>
+            <li>Malay-Indonesian</li>
+            <li>French</li>
+        </ul>
+        <ul>
+            <li data-employee="Bob Metz">Bob Metz</li>
+            <li data-employee="Billy Bob Jones">Billy Jones</li>
+            <li data-employee="Laura Jones-Bob">Laura Jones-Bob</li>
+        </ul>
+        <p class="tagSelector"> Click on link for TagSelectors function</p>
+        <a href="#" lang="en" >American English</a>
+        <a href="#" lang="en-UK">English English</a>
+        <a href="#" lang="es">Spanish</a>
+        <a href="#" lang="fr">French</a>
+        <a href="#" lang="de">German</a>
+        <a href="#" lang="ch">Chinese</a>
+        <a href="#" lang="ko">Korean</a>
+        <a href="#" lang="en-and-es">Spanglish</a>
+
+
+        <div>
+            <p>I am the first child of div #1.</p>
+
+            <p>I am the second child of div #1.</p>
+
+            <p>I am the third child of div #1.</p>
+
+            <p>I am the fourth child of div #1.</p>
+
+            <p>I am the fifth child of div #1.</p>
+        </div>
+        <div>
+            <p>I am the first child of div #2.</p>
+
+            <p>I am the second child of div #2.</p>
+
+            <p>I am the third child of div #2.</p>
+        </div>
+        <div>
+            <p >I am the only child of div #3.</p>
+            <span>Here is some text</span>
+        </div>
+        <div>
+            <form title="Calcular Fecha de Nacimiento">
+                <input type="text" id="name" name="name" value="">
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" value="">
+                <button type="button" id="btn_calcular_edad">Calcular Edad</button>
+                <br/>
+                <button type="button" id="idSelector">idSelector</button>
+                <button type="button" class="classSelector">classSelector</button>
+                <button type="button" id="changeSelector">changeSelector</button>
+                <button type="button" id="childSelector">child And descendant Selector</button>
+                
+                <br/>
+             <textarea rows="4" cols="50" disabled id="mostrarResultado">Resultado</textarea>
+            </form>
+        </div>
+      <script src="js/script.js"></script>
+    </body>
+
+</html>
