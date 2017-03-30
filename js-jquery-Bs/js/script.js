@@ -136,8 +136,8 @@ usuario.prototype.presentarse = function () {
 
 
 var implementaUsuario = function () {
-    var name = $('#name').attr('value');
-    var fecha = $('#fecha_nacimiento').attr('value');
+    var name = $('#name').val();
+    var fecha = $('#fecha_nacimiento').val();
     var usr = new usuario(name, fecha);
     usr.calcularEdad();
     mostrarResultado(usr.presentarse(), "presentacion");
