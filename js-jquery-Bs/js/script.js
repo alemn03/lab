@@ -1,19 +1,22 @@
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- * id Selector $("#btn_calcular_edad")
- * class selector $(".btn_calcular_edad")
- * tag selector $("p")
+ Autor:Carlos Alejandro Montero Navarro
+cedual:114910639
+lab js-jquery-bs
+javascript principal
+descripción: Este código contiene todo los metodos javascript y jquery solicitados en el lab
  */
 
-
+/*asignacion de funcion anonima al boton que calcula la edad 
+llama al metodo implementaUsuario*/
 $("#btn_calcular_edad").click(
         function () {
             implementaUsuario();
         }
 );
 
+/*asignacion de funcion anonima mostrarResultado
+al presionar el boton se va motar el mensaje en el texta area idselector el valor  cual 
+es contendio en por el boton y ademas se le asigna el css que va cambiar el color de text area*/
 $("#idSelector").click(
         function () {
             var texto = $("#idSelector").text();
@@ -22,7 +25,9 @@ $("#idSelector").click(
         }
 );
 
-
+/*asignacion de funcion anonima mostrarResultado
+al presionar el boton se va motar el mensaje en el texta area classselector los valores cuales 
+son contenidos por las clases asignados y ademas se le asigna el css que va cambiar el color de text area*/
 $(".classSelector").click(
         function () {
             var texto = $(".classSelector").text();
@@ -31,6 +36,9 @@ $(".classSelector").click(
         }
 );
 
+/*asignacion de funcion anonima mostrarResultado
+al presionar el boton se va motar el mensaje en el texta area tagselector los valores cuales 
+son contenidos por las etiquetas asignados y ademas se le asigna el css que va cambiar el color de text area*/
 $("a").click(
         function () {
             var texto = $("a").text();
@@ -38,6 +46,10 @@ $("a").click(
 
         }
 );
+
+/*asignacion de funcion anonima mostrarResultado
+al presionar el boton se van asignar el valor de identificador el valor que tenga otro seleccionado
+y ademas se le asigna el css que va cambiar el color de text area*/
 
 $("#changeSelector").click(
         function () {
@@ -48,6 +60,11 @@ $("#changeSelector").click(
         }
 );
 
+/*
+	se va motor el contendio del hijo y sus decendientes 
+	y ademas se le asigna el css que va cambiar el color de text area
+*/
+
 $("#childSelector").click(
         function () {
             var texto =  $("form > button").text();
@@ -56,6 +73,13 @@ $("#childSelector").click(
         }
 );
 
+/*
+funcion aninoma mostrarResultado
+resive texto y estilo
+se obtiene el componente text area que se va manipular
+se le remueven las clases css que tenga previamente cargadas
+se asigan el nuevo valor y la clase css
+*/
 
 var mostrarResultado = function (texto, estilo) {
     var textarea = $('#mostrarResultado');
@@ -66,13 +90,15 @@ var mostrarResultado = function (texto, estilo) {
 };
 
 
-
+/*funcion constructora de usuario
+resive una fecha y un nombre*/
 
 function usuario(Nombre, Fecha) {
-
+/* se asignan los valores de los atributos d*/
     this.fecha = Fecha;
     this.nombre = Nombre;
     this.anio = "";
+	/* metodo privado que calcula la edad de la persona */
     this.calcularEdad = function () {
         // Si la fecha es correcta, calculamos la edad
         var values = this.fecha.split('-');
@@ -127,14 +153,18 @@ function usuario(Nombre, Fecha) {
 
 
 }
-
+/*medodo public de usuario que se encarga de mostrar el resultado del calculo de la edad*/
 usuario.prototype.presentarse = function () {
     var respuesta = "Hola, mi nombre es " + this.nombre + "  y tengo " + this.anio + " años";
     return respuesta;
 };
 
 
-
+/*funcion anonima implementaUsuario
+no resive parametos 
+se encarga de crear una instancia de la funsion constructora usuario
+se crea el objeto nuevo con los valores que ingresa el usuario
+se cualcula la edad y se muestra el resultado*/
 var implementaUsuario = function () {
     var name = $('#name').val();
     var fecha = $('#fecha_nacimiento').val();
